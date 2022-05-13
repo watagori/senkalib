@@ -6,3 +6,6 @@ class BitbankTransaction:
 
     def get_transaction(self) -> dict:
         return self.transaction
+
+    def get_transaction_data_type(self) -> str:
+        return self.transaction["data_type"]
