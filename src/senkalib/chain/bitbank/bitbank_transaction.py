@@ -16,7 +16,7 @@ class BitbankTransaction:
     def get_datetime_jtc(self) -> str:
         return self.transaction["取引日時"]
 
-    def get_trade_uuid(self) -> str:
+    def get_transaction_id(self) -> str:
         return self.transaction["取引ID"]
 
     def get_token_pair(self) -> str:
