@@ -14,5 +14,9 @@ class BitbankTransactionGenerator(TransactionGenerator):
         settings: SenkaSetting,
         data: dict,
     ) -> List[BitbankTransaction]:
-        data["data_type"] = "bitbank_exchange"
-        return list(map(BitbankTransaction, data))
+        return list(map(lambda x: BitbankTransactionGenerator._add_data_type(x), data))
+
+    @staticmethod
+    def _add_data_type(data: dict) -> BitbankTransaction:
+        data["data_type"] == "bitbankc_exchange"
+        return BitbankTransaction(data)
